@@ -7,10 +7,10 @@ A tool to scrape player game logs from fangraphs as they relate to daily fantasy
 git clone https://github.com/conorkcorbin/fangraphs-webscraper.git
 ```
 
-### Python Environment 
+## Python Environment 
 Python 3.6.  
 
-### Scrape Game Logs
+## Scrape Game Logs
 
 The repo comes with a text file that matches every player playing back to 2002 with the fangraphs player ID. This is used to access their game logs. 
 
