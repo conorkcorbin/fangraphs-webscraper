@@ -4,7 +4,7 @@ import datetime
 import pandas as pd
 import urllib.request 
 
-def ScrapePlayerLogs(player_name,t1=None,t2=None):
+def scrape_player_logs(player_name,t1=None,t2=None):
     """
     Parameters
     ----------

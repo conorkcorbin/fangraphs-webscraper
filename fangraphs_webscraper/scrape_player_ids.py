@@ -1,7 +1,7 @@
 import urllib
 from bs4 import BeautifulSoup
 
-def scrapePlayerIdsFromYear(year=2002):
+def scrape_player_ids_from_year(year=2002):
     """ 
     Fangraphs maps each player to a player ID. You can access player information
     by appending a player's ID to the base URL.  Here we scrape player Ids
@@ -14,13 +14,13 @@ def scrapePlayerIdsFromYear(year=2002):
 
     """
     hrefs = GetUrls2PlayerRefs()
-    batters, pitchers = GetPlayerMaps(hrefs,year=2002)
+    batters, pitchers = GetPlayerMaps(hrefs, year)
 
-    with open('players' + str(year) + '.txt', 'w') as w:
+    with open('batters' + str(year) + '.txt', 'w') as w:
         for key,val in batters.items():
             w.write(val[0] + '\t' + key + '\n')
-        for key,val in pitchers.items():
-            w.write(val[0] + '\t' + key + '\n')
+        # for key,val in pitchers.items():
+        #     w.write(val[0] + '\t' + key + '\n')
 
 def GetUrls2PlayerRefs(url='http://www.fangraphs.com/players.aspx'):
     """
